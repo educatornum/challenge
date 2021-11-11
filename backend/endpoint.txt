@@ -1,0 +1,30 @@
+/auth/login
+/auth/logout
+
+/auth/user/createUser
+/auth/user/deleteUser
+/auth/user/changeUser
+
+
+
+========== SHOP SERVE API =========================
+FILE STRUCTURE:
+    /E-logit-ShopServe/src/main.py 
+    /E-logit-ShopServe/src/orderInfoSearch.py
+    /E-logit-ShopServe/src/orderStatusUpdate.py
+
+/api/shopServe/
+/api/shopServe/OrderStatusSearch
+/api/shopServe/OrderStatusUpdate
+/api/shopServe/csvdownload/OrderStatusSearch
+/api/shopServe/csvdownload/OrderStatusUpdate
+/api/shopServe/history/OrderStatusSearch
+/api/shopServe/history/OrderStatusUpdate
+
+
+========== CROSS MALL API  SERVE =========================
+/api/crossMall/
+/api/ecForce/
+
+
+N-84881
