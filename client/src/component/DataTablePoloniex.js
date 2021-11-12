@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 import ReactApexChart from "react-apexcharts";
 class ApexChart extends React.Component {

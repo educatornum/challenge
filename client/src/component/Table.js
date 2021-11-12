@@ -37,13 +37,12 @@ const useStyles = makeStyles((theme) => ({
 export default function Table() {
     const classes = useStyles();
     const [data, setData] = useState([]);
-    const [seconds, setSeconds] = useState(0);
-    const [color, setColor] = useState("black");
+    // const [seconds, setSeconds] = useState(0);
+    // const [color, setColor] = useState("black");
     const [done, setDone] = useState(undefined);
 
     useEffect(() => {
       const interval = setInterval(() => {
-        setSeconds(seconds => seconds + 1);
         (async function() {
             try {
                 const response = await fetch("https://poloniex.com/public?command=returnOrderBook&currencyPair=BTC_ETH&depth=25");
@@ -61,7 +60,7 @@ export default function Table() {
 
     useEffect(() => {
       const interval = setInterval(() => {
-        setSeconds(seconds => seconds + 1);
+        // setSeconds(seconds => seconds + 1);
         (async function() {
             try {
                 const response = await fetch("http://localhost:5000");
@@ -76,6 +75,7 @@ export default function Table() {
       }, 1000);
       return () => clearInterval(interval);
     }, []);
+
     return (
         <>
             {!done ? (
@@ -88,7 +88,7 @@ export default function Table() {
                     <Grid item xs={6}>
                         <Paper className={classes.paper}>
                             <div>
-                                {data.map(function(d, idx){
+                                {data.length > 0 && data.map(function(d, idx){
                                     return (
                                         <div key={idx} className={classes.root}>
                                             <img src={bittrex} alt="bittrex logo"  width="300"/><hr/> 

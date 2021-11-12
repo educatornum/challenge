@@ -4,7 +4,7 @@ const cors = require('cors');
 const apiRoutes = require('./routes/apiRoute');
 
 // CORS config WhiteList
-var whitelist = ['http://localhost:8000']
+var whitelist = ['http://localhost:8000',"http://ec2-34-242-154-44.eu-west-1.compute.amazonaws.com:8000/","http://ec2-34-242-154-44.eu-west-1.compute.amazonaws.com:5000/"]
 var corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
