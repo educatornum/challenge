@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import api from "../config/api.js"
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import ReactLoading from 'react-loading';
@@ -65,11 +64,9 @@ export default function Table() {
         setSeconds(seconds => seconds + 1);
         (async function() {
             try {
-                const response = await fetch("http://localhost:8000");
+                const response = await fetch("http://localhost:5000");
                 const json = await response.json();
                 setData(json.data);
-                // setColor(color === 'red' ? 'white' : 'red');
-                // setColor("orange")
                 // setColor("white")
                 setDone(true);
             } catch (e) {
