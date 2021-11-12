@@ -21,14 +21,6 @@ app.use(express.json()); // BODY INTO JSON
 
 dotenv.config({path: './config/config.env'})
 
-// setup the logger
-// var accessLogStream = rfs.createStream('access.log', {
-//     interval: '1d', // rotate daily
-//     path: path.join(__dirname, 'log')
-//   })
-// app.use(morgan('combined', { stream: accessLogStream }))
-
-
 app.use('/',apiRoutes);
 // app.use(errorHandler);
 
